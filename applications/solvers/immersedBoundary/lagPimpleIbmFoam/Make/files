@@ -1,0 +1,3 @@
+lagPimpleIbmFoam.C
+
+EXE = $(FOAM_APPBIN)/lagPimpleIbmFoam

@@ -1,0 +1,5 @@
+# etc/config.csh/prefs.sys-openmpi
+#
+# Packaging configured value for sys-openmpi
+setenv MPI_ARCH_PATH "/usr/lib/x86_64-linux-gnu/openmpi"
+#----

@@ -1,0 +1,34 @@
+$(OBJECTS_DIR)/immersedPoly.o: immersedPoly/immersedPoly.dep
+immersedPoly/immersedPoly.dep: immersedPoly/immersedPoly.C
+immersedPoly/immersedPoly.dep: immersedPoly/immersedPoly.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/optimisationSwitch.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/controlSwitches.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/safeBool.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/safeBoolI.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/scalar.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/floatScalar.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/doubleFloat.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/label.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/int.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/int32.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/word.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/foamString.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/char.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Hasher.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/foamStringI.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/wordI.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/pTraits.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/direction.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/int64.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelSpecific.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/products.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ScalarTemplate.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/doubleScalar.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/longDoubleScalar.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/controlSwitchesI.H
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/controlSwitches.C
+immersedPoly/immersedPoly.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/tolerancesSwitch.H
+$(OBJECTS_DIR)/immersedPoly.o: $(EXE_DEP)
+$(OBJECTS_DIR)/immersedPoly.o:
+	@SOURCE_DIR=immersedPoly
+	SOURCE=immersedPoly/immersedPoly.C ; $(Ctoo)

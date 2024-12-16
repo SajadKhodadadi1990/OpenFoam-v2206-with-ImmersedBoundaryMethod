@@ -1,0 +1,213 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _76d719d1-20220624 OPENFOAM=2206 version=v2206
+Arch   : "LSB;label=32;scalar=64"
+Exec   : pimpleIbmFoam
+Date   : Sep 07 2022
+Time   : 02:35:57
+Host   : user
+PID    : 3954
+I/O    : uncollated
+Case   : /usr/lib/openfoam/openfoam2206/tutorials/immersedBoundary/MovingIb/laminar/movingCylinderInChannelIco
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From void* Foam::dlLibraryTable::openLibrary(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 188
+    Could not load "liblduSolvers.so"
+liblduSolvers.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From static Foam::IOstreamOption::compressionType Foam::IOstreamOption::compressionEnum(const Foam::word&, Foam::IOstreamOption::compressionType)
+    in file db/IOstreams/IOstreams/IOstreamOption.C at line 115
+    Unknown compression specifier 'uncompressed', using compression off
+Create mesh for time = 0
+
+Selecting dynamicFvMesh immersedBoundarySolidBodyMotionFvMesh
+Selecting solid-body motion function oscillatingLinearMotion
+
+PIMPLE: no residual control data found. Calculations will employ 4 corrector loops
+
+Reading field p
+
+External flow
+Immersed boundary ibCylinder info: nIbCells: 42 nDeadCells: 104 nIbFaces: 118 nDeadFaces: 439
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+No MRF models present
+
+No finite volume options present
+Constructing face velocity Uf
+
+Courant Number mean: 0.499695 max: 2.31565
+Courant Number mean: 0.499695 max: 2.31565
+
+Starting time loop
+
+ibCellVolumes:
+42
+(
+0.000103407
+5.97047e-05
+3.77933e-05
+3.77933e-05
+5.97047e-05
+0.000103407
+0.000122023
+4.73723e-05
+4.73723e-05
+0.000122023
+0.000125522
+3.2852e-05
+3.2852e-05
+0.000125522
+7.14928e-05
+7.14928e-05
+1.3819e-05
+1.3819e-05
+0.000110231
+0.000110231
+0.000100195
+0.000100195
+0.000110231
+0.000110231
+1.3819e-05
+1.3819e-05
+7.14928e-05
+7.14928e-05
+0.000125522
+3.2852e-05
+3.2852e-05
+0.000125522
+0.000122023
+4.73723e-05
+4.73723e-05
+0.000122023
+0.000103407
+5.97047e-05
+3.77933e-05
+3.77933e-05
+5.97047e-05
+0.000103407
+)
+
+Courant Number mean: 0.499695 max: 2.31565
+Time = 0.02
+
+PIMPLE: iteration 1
+Storing old points for time index 1
+Moving immersed boundary points for patch ibCylinder
+External flow
+Immersed boundary ibCylinder info: nIbCells: 44 nDeadCells: 99 nIbFaces: 128 nDeadFaces: 418
+volume continuity errors : sum local = 0.00150688, global = -0.00150688
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 0.00397448, No Iterations 7
+time step continuity errors : sum local = 7.04192e-06, global = 1.84719e-07, cumulative = 1.84719e-07
+smoothSolver:  Solving for Ux, Initial residual = 0.212495, Final residual = 0.0106979, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 0.0482801, No Iterations 1
+GAMG:  Solving for p, Initial residual = 1, Final residual = 0.00648422, No Iterations 7
+time step continuity errors : sum local = 1.33648e-05, global = 1.63548e-07, cumulative = 3.48267e-07
+GAMG:  Solving for p, Initial residual = 0.0658006, Final residual = 9.51727e-07, No Iterations 14
+time step continuity errors : sum local = 1.52007e-08, global = -2.81067e-10, cumulative = 3.47986e-07
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0104941, Final residual = 0.000616342, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0328292, Final residual = 0.0019158, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.0403077, Final residual = 0.00022185, No Iterations 5
+time step continuity errors : sum local = 2.33207e-06, global = -2.33274e-08, cumulative = 3.24658e-07
+GAMG:  Solving for p, Initial residual = 0.0119666, Final residual = 7.62581e-07, No Iterations 10
+time step continuity errors : sum local = 7.48486e-09, global = 1.91315e-10, cumulative = 3.2485e-07
+PIMPLE: iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 0.000785463, Final residual = 3.52759e-05, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.00265722, Final residual = 0.000115457, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.00411848, Final residual = 1.69129e-05, No Iterations 4
+time step continuity errors : sum local = 1.70231e-07, global = 2.58595e-09, cumulative = 3.27436e-07
+GAMG:  Solving for p, Initial residual = 0.0014523, Final residual = 6.22891e-07, No Iterations 6
+time step continuity errors : sum local = 6.29031e-09, global = -1.70872e-10, cumulative = 3.27265e-07
+PIMPLE: iteration 4
+smoothSolver:  Solving for Ux, Initial residual = 0.000143071, Final residual = 5.60887e-06, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000452154, Final residual = 1.23766e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.000754895, Final residual = 3.65842e-06, No Iterations 4
+time step continuity errors : sum local = 3.68994e-08, global = -7.20124e-10, cumulative = 3.26545e-07
+GAMG:  Solving for p, Initial residual = 0.000332911, Final residual = 4.88473e-07, No Iterations 5
+time step continuity errors : sum local = 4.92585e-09, global = 2.17551e-10, cumulative = 3.26762e-07
+ExecutionTime = 0.04 s  ClockTime = 0 s
+
+Courant Number mean: 0.502279 max: 2.93069
+Time = 0.04
+
+PIMPLE: iteration 1
+Storing old points for time index 2
+Moving immersed boundary points for patch ibCylinder
+External flow
+Immersed boundary ibCylinder info: nIbCells: 40 nDeadCells: 101 nIbFaces: 112 nDeadFaces: 426
+volume continuity errors : sum local = 0.00252218, global = -0.00252218
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 0.0093064, No Iterations 3
+time step continuity errors : sum local = 2.53239e-05, global = -5.37737e-08, cumulative = 2.72989e-07
+smoothSolver:  Solving for Ux, Initial residual = 0.260831, Final residual = 0.0152153, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.329824, Final residual = 0.0268334, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.387096, Final residual = 0.00326986, No Iterations 10
+time step continuity errors : sum local = 0.000343457, global = -2.03209e-06, cumulative = -1.7591e-06
+GAMG:  Solving for p, Initial residual = 0.0647777, Final residual = 7.18072e-07, No Iterations 34
+time step continuity errors : sum local = 0.000293265, global = 6.19214e-10, cumulative = -1.75848e-06
+PIMPLE: iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0293278, Final residual = 0.00142229, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0349719, Final residual = 0.00218489, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.116086, Final residual = 0.000645527, No Iterations 4
+time step continuity errors : sum local = 6.43948e-06, global = -9.2612e-08, cumulative = -1.8511e-06
+GAMG:  Solving for p, Initial residual = 0.0317762, Final residual = 5.87698e-07, No Iterations 12
+time step continuity errors : sum local = 4.86663e-09, global = -1.45438e-10, cumulative = -1.85124e-06
+PIMPLE: iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 0.0112864, Final residual = 0.00056189, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.010086, Final residual = 0.000591723, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.0441922, Final residual = 0.000389404, No Iterations 9
+time step continuity errors : sum local = 0.000164075, global = 1.49105e-07, cumulative = -1.70214e-06
+GAMG:  Solving for p, Initial residual = 0.0352786, Final residual = 9.05307e-07, No Iterations 23
+time step continuity errors : sum local = 0.000160832, global = -3.38434e-10, cumulative = -1.70248e-06
+PIMPLE: iteration 4
+smoothSolver:  Solving for Ux, Initial residual = 0.00724143, Final residual = 3.41302e-06, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00353876, Final residual = 1.49576e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.03356, Final residual = 0.000121022, No Iterations 6
+time step continuity errors : sum local = 1.03254e-06, global = -1.9112e-08, cumulative = -1.72159e-06
+GAMG:  Solving for p, Initial residual = 0.0207741, Final residual = 6.37239e-07, No Iterations 11
+time step continuity errors : sum local = 5.83841e-09, global = -7.08585e-11, cumulative = -1.72166e-06
+ExecutionTime = 0.07 s  ClockTime = 0 s
+
+Courant Number mean: 0.502325 max: 10.1519
+Time = 0.06
+
+PIMPLE: iteration 1
+Storing old points for time index 3
+Moving immersed boundary points for patch ibCylinder
+External flow
+Immersed boundary ibCylinder info: nIbCells: 44 nDeadCells: 102 nIbFaces: 126 nDeadFaces: 431
+volume continuity errors : sum local = 0.00183929, global = -0.00183929
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 0.00953516, No Iterations 3
+time step continuity errors : sum local = 2.17026e-05, global = 4.69754e-09, cumulative = -1.71696e-06
+smoothSolver:  Solving for Ux, Initial residual = 0.11563, Final residual = 0.00645905, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.100724, Final residual = 0.00641764, No Iterations 1
+GAMG:  Solving for p, Initial residual = nan, Final residual = nan, No Iterations 1000
+time step continuity errors : sum local = nan, global = -nan, cumulative = -nan
+#0  Foam::error::printStack(Foam::Ostream&) at ??:?
+#1  Foam::sigFpe::sigHandler(int) at ??:?
+#2  ? in /lib/x86_64-linux-gnu/libpthread.so.0
+#3  Foam::fv::cellLimitedGrad<double, Foam::fv::gradientLimiters::minmod>::calcGrad(Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh> const&, Foam::word const&) const at ??:?
+#4  Foam::fv::gradScheme<double>::grad(Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh> const&, Foam::word const&) const in /usr/lib/openfoam/openfoam2206/platforms/linux64GccDPInt32Opt/bin/pimpleIbmFoam
+#5  Foam::tmp<Foam::GeometricField<Foam::outerProduct<Foam::Vector<double>, double>::type, Foam::fvPatchField, Foam::volMesh> > Foam::fvc::grad<double>(Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh> const&) in /usr/lib/openfoam/openfoam2206/platforms/linux64GccDPInt32Opt/bin/pimpleIbmFoam
+#6  ? in /usr/lib/openfoam/openfoam2206/platforms/linux64GccDPInt32Opt/bin/pimpleIbmFoam
+#7  __libc_start_main in /lib/x86_64-linux-gnu/libc.so.6
+#8  ? in /usr/lib/openfoam/openfoam2206/platforms/linux64GccDPInt32Opt/bin/pimpleIbmFoam
+Floating point exception (core dumped)

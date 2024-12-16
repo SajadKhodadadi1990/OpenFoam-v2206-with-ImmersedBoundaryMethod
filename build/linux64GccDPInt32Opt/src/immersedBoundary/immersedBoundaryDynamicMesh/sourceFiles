@@ -1,0 +1,5 @@
+SOURCE = \
+movingImmersedBoundary/movingImmersedBoundary.C \
+immersedBoundarySolidBodyMotionFvMesh/immersedBoundarySolidBodyMotionFvMesh.C \
+
+# sources

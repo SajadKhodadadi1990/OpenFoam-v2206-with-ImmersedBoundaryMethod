@@ -1,0 +1,240 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.1                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       surfaceScalarField;
+    location    "0";
+    object      sGamma;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   nonuniform List<scalar> 
+180
+(
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0.4
+0.4
+0.4
+1e-15
+0.4
+1e-15
+1
+0.4
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1e-15
+0.4
+1e-15
+1e-15
+1e-15
+1e-15
+1
+0.4
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1e-15
+0.4
+1e-15
+1e-15
+1e-15
+1e-15
+1
+0.4
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0.4
+1
+0.4
+1
+0.4
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+)
+;
+
+boundaryField
+{
+    ibCylinder
+    {
+        type            immersedBoundary;
+        value           nonuniform 0();
+    }
+    in
+    {
+        type            calculated;
+        value           uniform 1;
+    }
+    out
+    {
+        type            calculated;
+        value           uniform 1;
+    }
+    top
+    {
+        type            calculated;
+        value           uniform 1;
+    }
+    bottom
+    {
+        type            calculated;
+        value           uniform 1;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

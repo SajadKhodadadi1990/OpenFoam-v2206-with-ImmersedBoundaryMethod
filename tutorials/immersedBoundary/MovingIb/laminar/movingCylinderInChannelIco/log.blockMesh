@@ -1,0 +1,103 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _76d719d1-20220624 OPENFOAM=2206 version=v2206
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Sep 07 2022
+Time   : 02:35:57
+Host   : user
+PID    : 3950
+I/O    : uncollated
+Case   : /usr/lib/openfoam/openfoam2206/tutorials/immersedBoundary/MovingIb/laminar/movingCylinderInChannelIco
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From void* Foam::dlLibraryTable::openLibrary(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 188
+    Could not load "liblduSolvers.so"
+liblduSolvers.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From static Foam::IOstreamOption::compressionType Foam::IOstreamOption::compressionEnum(const Foam::word&, Foam::IOstreamOption::compressionType)
+    in file db/IOstreams/IOstreams/IOstreamOption.C at line 115
+    Unknown compression specifier 'uncompressed', using compression off
+--> FOAM Warning : 
+    From blockMesh
+    in file findBlockMeshDict.H at line 56
+    Using the old blockMeshDict location: "constant/polyMesh/blockMeshDict"
+    instead of the default location:  "system/blockMeshDict"
+
+Creating block mesh from "constant/polyMesh/blockMeshDict"
+--> FOAM IOWarning :
+    Found [v1012] 'convertToMeters' entry instead of 'scale' in dictionary "constant/polyMesh/blockMeshDict"
+
+    This keyword is 138 months old.
+
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from patches section
+
+Reading physicalType from existing boundary file
+
+Default patch type set to empty
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+Not deleting polyMesh directory "constant/polyMesh"
+    because it contains blockMeshDict
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 0.04 .. 0.04
+        j : 0.04 .. 0.04
+        k : 0.08 .. 0.08
+
+
+There are no merge patch pairs
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-1 -0.5 -0.04) (2 0.5 0.04)
+  nPoints: 3952
+  nCells: 1875
+  nFaces: 7600
+  nInternalFaces: 3650
+----------------
+Patches
+----------------
+  patch 0 (start: 3650 size: 25) name: in
+  patch 1 (start: 3675 size: 25) name: out
+  patch 2 (start: 3700 size: 75) name: top
+  patch 3 (start: 3775 size: 75) name: bottom
+  patch 4 (start: 3850 size: 3750) name: frontAndBack
+
+End
+
